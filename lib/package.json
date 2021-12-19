@@ -6,6 +6,8 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

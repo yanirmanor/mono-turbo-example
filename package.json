@@ -8,12 +8,18 @@
     "build": "turbo run build"
   },
   "turbo": {
-    "build": {
-      "dependsOn": ["^build"]
-    },
     "pipeline": {
       "dev": {
         "cache": false
+      },
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "build/**",
+          "dist/**"
+        ]
       }
     }
   },
@@ -21,6 +27,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "pnpm": "^6.24.0",
     "turbo": "^1.0.9"
   }
 }

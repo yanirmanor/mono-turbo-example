@@ -4,21 +4,25 @@ importers:
 
   .:
     specifiers:
+      pnpm: ^6.24.0
       turbo: ^1.0.9
     devDependencies:
+      pnpm: 6.24.0
       turbo: 1.0.9
 
-  app:
+  application:
     specifiers:
       '@remix-run/dev': ^1.0.6
       '@remix-run/react': ^1.0.6
       '@remix-run/serve': ^1.0.6
+      lib: workspace:*
       react: ^17.0.2
       react-dom: ^17.0.2
       remix: ^1.0.6
     dependencies:
       '@remix-run/react': 1.0.6_react-dom@17.0.2+react@17.0.2
       '@remix-run/serve': 1.0.6_react-dom@17.0.2+react@17.0.2
+      lib: link:../lib
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       remix: 1.0.6
@@ -2614,6 +2618,12 @@ packages:
   /picomatch/2.3.0:
     resolution: {integrity: sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=}
     engines: {node: '>=8.6'}
+    dev: true
+
+  /pnpm/6.24.0:
+    resolution: {integrity: sha1-OnpgKT2pzCsiVzUW7feeC03fXQg=}
+    engines: {node: '>=12.17'}
+    hasBin: true
     dev: true
 
   /postcss/8.4.5:
